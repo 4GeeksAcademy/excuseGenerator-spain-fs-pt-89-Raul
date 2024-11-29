@@ -17,12 +17,20 @@ window.onload = function() {
     "while I was praying"
   ];
 
-  //aleatoriedad
+  // funcion crear aleatorio
+  function createAleatoryElement(array) {
+    return array[Math.floor(Math.random() * array.length)];
+  }
 
-  let arraywho = Math.floor(Math.random() * who.length);
-  let arrayaction = Math.floor(Math.random() * action.length);
-  let arraywhat = Math.floor(Math.random() * what.length);
-  let arraywhen = Math.floor(Math.random() * when.length);
+  //aleatoriedad
+  function createRandomIndex(array) {
+    return Math.floor(Math.random() * array.length);
+  }
+
+  let arraywho = createRandomIndex(who);
+  let arrayaction = createRandomIndex(action);
+  let arraywhat = createRandomIndex(what);
+  let arraywhen = createRandomIndex(when);
 
   //excusa
   document.querySelector("#excuse").innerHTML =
